@@ -1,0 +1,128 @@
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+// Cart Counter
+
+function updatecartCounter() {
+    const counter = document.getElementById('cartCount');
+    if(counter) counter.textContent = cart.length;
+
+    console.log("Cart Counter Working")
+}
+
+// Add To Cart 
+
+function addToCart(product, price, image, size, color) {
+    cart.push({product, price, image, size, color});
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updatecartCounter();
+
+    console.log("Running")
+}
+
+// "Add To Cart" Buttons
+
+const addButtons = document.querySelectorAll('.addbtn');
+
+addButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        const itemCard = button.closest('.item');
+        const product = itemCard.dataset.name;
+        const price = parseInt(itemCard.dataset.price);
+        const image = itemCard.dataset.image;
+
+        const sizeSelect = itemCard.querySelector(".sizeSelect");
+
+        // Default value
+        let size = null;
+
+        // Only run if product HAS sizes
+        if(sizeSelect){
+
+        size = sizeSelect.value;
+
+        if(size === ""){
+            alert("Please select a size!");
+            return;
+            }
+        }
+
+        const colorSelect = itemCard.querySelector(".colorSelect");
+
+        let color = null;
+
+        if(colorSelect){
+
+            color = colorSelect.value;
+
+            if(color === ""){
+                alert("Please select a color!");
+                return;
+            }
+        }
+
+        addToCart(product, price, image, size, color);
+        alert("Item add to cart!");
+    });
+
+    console.log("Add to cart working")
+});
+
+// Remove from cart 
+
+function removeItem(index) {
+    cart.splice(index, 1);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    location.reload();
+};
+
+// Display Cart
+
+const shipping = 250;
+
+function displayCart() {
+
+    const cartList = document.getElementById('cartList');
+    const subtotalEl = document.getElementById('subtotal');
+    const priceEl = document.getElementById('total');
+
+    if(!cartList) return;
+
+    cartList.innerHTML = "";
+    let subtotal = 0;
+
+    cart.forEach((item, index) => {
+
+        const li = document.createElement("li");
+        li.classList.add("cartItem");
+
+        li.innerHTML = `
+            <div class="cartRow">
+                <div class="cartimage">
+                    <img src="${item.image}" alt="${item.product}">
+                </div>
+                <span class="productname">${item.product}</span>
+                ${item.size ? `<span class="productsize">${item.size}</span>` : ""}
+                ${item.color ? `<span class="productcolor">${item.color}</span>` : ""}
+                <button onclick="removeItem(${index})" class="remove">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"><path d="M360-640v-80h240v80H360ZM223.5-103.5Q200-127 200-160t23.5-56.5Q247-240 280-240t56.5 23.5Q360-193 360-160t-23.5 56.5Q313-80 280-80t-56.5-23.5Zm400 0Q600-127 600-160t23.5-56.5Q647-240 680-240t56.5 23.5Q760-193 760-160t-23.5 56.5Q713-80 680-80t-56.5-23.5ZM40-800v-80h131l170 360h280l156-280h91L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68.5-39t-1.5-79l54-98-144-304H40Z"/></svg>
+                </button>
+                <span class="productprice">R${item.price}</span>
+            </div>
+        `;
+
+        cartList.appendChild(li);
+        subtotal += item.price;
+    });
+
+    if(subtotalEl) subtotalEl.textContent = subtotal;
+    if(fullprice) fullprice.textContent = subtotal + shipping;
+
+    console.log('cartList');
+
+};
+
+
+// Run and update page when loaded
+
+updatecartCounter();
+displayCart();

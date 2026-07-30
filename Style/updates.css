@@ -1,0 +1,151 @@
+* { 
+    margin: 0;
+    padding: 0;
+}
+
+.news {
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+    background: #d61900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ticker {
+    white-space: nowrap;
+}
+
+.ticker span {
+    font-size: 30px;
+    font-weight: 400;
+    color: #fff;
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll-left 50s linear infinite;
+}
+
+
+@keyframes scroll-left{
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.pagetitle {
+    background: linear-gradient(230deg, #d5d4d4, #919090, #a9aaa9, #515150, #3c3c3a);
+    margin: 20px;
+    width: 840px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+}
+
+.fuck {
+    margin: 0;
+    margin-top: 10px;
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.sub {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.paragra {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.live {
+    width: 820px;
+    background: linear-gradient(189deg, #d9e4d7, #becfbb, #8ea48b, #728a6e, #324d3e, #2b4336);
+    margin: 20px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.went {
+    color: #000;
+    font-size: 40px;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.subtext {
+    color: #000;
+    font-size: 20px;
+    font-weight: 200;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.about {
+    color: whitesmoke;
+    font-size: 28px;
+    font-weight: 400;
+    margin: 5px;
+}
+
+.tags {
+    color: whitesmoke;
+}
+
+@media (max-width: 460px) {
+
+    .pagetitle {
+        width: 420px;
+        margin: 10px;
+    }
+
+    .fuck {
+        font-size: 30px;
+    }
+
+    .sub {
+        font-size: 20px;
+    }
+
+    .paragra {
+        margin: 5px;
+        font-size: 18px;
+    }
+
+    .hero {
+        width: 400px;
+    }
+
+    .live {
+        width: 380px;
+    }
+
+    .went {
+        font-size: 30px;
+    }
+
+    .subtext {
+        font-size: 14px;
+
+    }
+
+    .about {
+        font-size: 16px;
+        margin-bottom: 5px; 
+    }
+
+    .tags {
+        font-size: 14px;
+    }
+}

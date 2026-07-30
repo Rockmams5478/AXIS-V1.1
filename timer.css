@@ -1,0 +1,54 @@
+.hero {
+    width: 840px;
+    background: linear-gradient(145deg, #051f20, #0b2b26, #163832, #235347, #8eb69b, #daf1de);
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    border-radius: 20px;
+}
+
+.head {
+    font-size: 50px;
+    margin: 5px;
+}
+
+.line {
+    font-size: 40px;
+    font-weight: 100;
+    margin: 5px;
+}
+
+.para {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 5px;
+}
+
+.timebox {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+@media (max-width: 460px) {
+
+    .head {
+        font-size: 30px;
+    }
+
+    .line {
+        font-size: 26px;
+    }
+
+    .para {
+        font-size: 18px;
+    }
+
+    .timebox {
+        gap: 6px;
+    }
+
+}

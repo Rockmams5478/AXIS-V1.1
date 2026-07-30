@@ -1,0 +1,138 @@
+.news {
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+    background: #d61900;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ticker {
+    white-space: nowrap;
+}
+
+.ticker span {
+    font-size: 30px;
+    font-weight: 400;
+    color: #fff;
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll-left 50s linear infinite;
+}
+
+@keyframes scroll-left{
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.line {
+    font-size: 40px;
+    font-weight: 400;
+    margin: 5px;
+}
+
+.para {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 5px;
+}
+
+.services {
+    background: linear-gradient(230deg, #d5d4d4, #919090, #a9aaa9, #515150, #3c3c3a);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    border-radius: 20px;
+}
+
+.sbox {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+}
+
+.ser {
+    height: auto;
+    width: 260px;
+    background: linear-gradient(189deg, #5a636a, #69818d, #2d4a53, #132e35, #0d1f23);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px
+}
+
+.image img {
+    width: 230px;
+    height: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #688a91;
+    margin: 20px;
+    margin-bottom: 0;
+    border-radius: 20px;
+    border: 2px solid #000;
+}
+
+.head {
+    margin: 8px;
+    font-size: 30px;
+    font-weight: 400;
+    color: whitesmoke;
+}
+
+.viewmore {
+    height: 40px;
+    width: 230px;
+    margin: 15px;
+    background-color: #486068;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 460px) {
+
+    .line {
+        font-size: 28px;
+        font-weight: 600;
+        margin: 3px;
+    }
+
+    .para {
+        font-size: 12px;
+        font-weight: 300;
+        margin: 3px;
+    }
+
+    .ser {
+        width: 40%;
+    }
+
+    .image img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .head {
+        margin: 5px;
+        font-size: 20px;
+    }
+
+    .viewmore {
+        width: 120px;
+        margin: 5px;
+    }
+
+}

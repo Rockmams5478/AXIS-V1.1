@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+        <title>Hamburger Menu</title>
+        <style>
+            body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                background: rgb(235, 236, 242);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .center {
+                width: 900px;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                margin: 0;
+                margin-top: 20px; 
+            }
+
+            .menu {
+                width: 100%;
+                height: fit-content;
+                box-sizing: border-box;
+                background: rgb(37, 38, 53);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .logo {
+                width: fit-content;
+                font-family: poppins;
+                font-size: 32px;
+                color: whitesmoke;
+                font-weight: 600;
+                padding: 15px;
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+            }
+
+            #menu {
+                display: none;
+
+            }
+
+            .logo label {
+                display: none;
+            }
+
+            .items {
+                width: fit-content;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+            }
+
+            .item {
+                width: 100px;
+                padding: 10px 18px;
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 5mm;
+                font-family: poppins;
+                font-size: 16px;
+                color: whitesmoke;
+                text-decoration: none;
+            }
+
+            .item:hover {
+                background: rgba(100, 100, 100, 0.5);
+            }
+
+            @media screen and (max-width: 650px) {
+                .center {
+                    width: 100%;
+                    margin-top: 0;
+                }
+
+                .menu {
+                    flex-direction: column;
+                }
+
+                .menu .logo {
+                    width: 100%;
+                }
+
+                .menu .logo label {
+                    display: block;
+                    cursor: pointer;
+                    position: relative;
+                    width: 30px;
+                    height: 30px;
+
+                }
+
+                .menu .logo label::before {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+
+                }
+
+                .menu .items {
+                    width: 100%;
+                    flex-direction: column;
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: 0.5s ease-in-out;
+
+                }
+
+                .menu .item {
+                    width: 100%;
+                    padding: 15px;
+                    border-radius: 0;
+                    border-top: 0.5mm solid rgb(52, 53, 71);
+                }
+
+                #menu:checked ~ .items {
+                    max-height: 500px;
+
+                }
+
+
+            }
+
+            .headerbox {
+                width: 900px;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                margin: 0;
+                margin-top: 20px;
+                background:
+                    linear-gradient(40deg, #3e515b, #4d6471, #a76d5e, #c4a071);
+                border-radius: 30px 30px 0 0;
+                border-bottom:
+
+                    1px solid rgba(255, 255, 255, 0.5);
+
+                box-shadow:
+
+                    0 10px 30px rgba(0,0,0,.25);
+                
+            }
+
+            .nav {
+                width: 100%;
+                height: fit-content;
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .headerbox .logo-two {
+                display: flex;
+            }
+
+            .logo-two label {
+                display: none;
+            }
+
+            .axis-logo img {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                padding: 15px;
+            }
+
+            .axis-logo img:hover{
+
+                transform:rotate(8deg) scale(1.08);
+
+            }
+
+            .nav-bar {
+                width: fit-content;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 20px;
+                gap: 10px;
+                border-radius: 40px;
+
+                border: 2px solid rgba(255, 255, 255, 0.5);
+
+                background:
+
+                    rgba(255,255,255,.05);
+
+                backdrop-filter:blur(26px);
+
+                box-shadow: 
+                    6px 6px 10px -2px rgba(255, 255, 255, .78),
+                    inset 4px 4px 8px -2px rgba(25, 25, 25, .5);
+            }
+
+            .nav-link {
+                display:flex;
+
+                justify-content:center;
+
+                align-items:center;
+
+                width: 100px;
+                height: 40px;
+
+                border-radius: 40px;
+
+                color:white;
+
+                font-size:16px;
+
+                font-weight:500;
+
+                transition:.35s;
+
+                text-decoration: none;
+            }
+
+            .nav-link:hover {
+                background:
+
+                    linear-gradient(
+                        135deg,
+                        #3E515B,
+                        #4D6471
+                    );
+
+                transform:
+
+                    translateY(-2px);
+
+                box-shadow:
+
+                    0 10px 25px rgba(62,81,91,.35);
+            }
+
+            .active{
+
+                background:
+
+                    linear-gradient(
+                        80deg,
+                        #708f96,
+                        #aa895f
+                    );
+
+                color:white;
+
+            }
+
+            @media screen and (max-width: 650px) {
+                .headerbox {
+                    width: 100%;
+                    border-radius: 0;
+                    margin-top: 0;
+                }
+
+                .nav {
+                    flex-direction: column;
+                }
+
+                .headerbox .logo-two {
+                    width: 100%;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+
+                .headerbox .logo-two label {
+                    display: block;
+                    cursor: pointer;
+                    position: relative;
+                    width: 30px;
+                    height: 30px;
+                    color: whitesmoke;
+                    padding: 15px;
+                }
+
+                .headerbox .logo-two label::before {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+
+                .nav-bar {
+                    flex-direction: column;
+                    width: 80%;
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: 0.34s ease-in-out;
+                    border: none;
+                    border-radius: 0;
+                }
+
+                #menu:checked ~ .nav-bar {
+                    max-height: 600px;
+                    border-radius: 20px;
+                    height: auto;
+                    margin: 0;
+                    margin-bottom: 10px;
+                    border: 2px solid rgba(255, 255, 255, .78);
+                    right: 0;
+                }
+
+                #menu:checked ~ .nav-bar .nav-link {
+                    animation: slideIn 0.4s ease forwards;
+                }
+
+                .nav-link {
+                    width: 80%;
+                    margin-top: 10px;
+                    font-size: 24px;
+                    border-top: 0.5mm solid rgba(255, 255, 255, 0.315);
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                }
+
+                .nav-bar .nav-link {
+                    opacity: 0;
+                    transform: translateX(25px);
+                }
+
+                #menu:checked ~ .nav-bar .nav-link:nth-child(1) {
+                    animation-delay: 1s;
+                }
+
+                #menu:checked ~ .nav-bar .nav-link:nth-child(2) {
+                    animation-delay: 1.5s;
+                }
+
+                #menu:checked ~ .nav-bar .nav-link:nth-child(3) {
+                    animation-delay: 2s;
+                }
+
+                #menu:checked ~ .nav-bar .nav-link:nth-child(4) {
+                    animation-delay: 2.5s;
+                }
+
+                #menu:checked ~ .nav-bar .nav-link:nth-child(5) {
+                    animation-delay: 3s;
+                }
+
+                #menu:checked ~ .nav-bar .nav-link:nth-child(6) {
+                    animation-delay: 3.5s;
+                }
+
+                @keyframes slideIn {
+
+                    from {
+                        opacity: 0;
+                        transform: translateY(25px);
+                    }
+
+                    to {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+
+                }
+
+   
+            }
+
+
+            /*==============
+            .menu {
+                height: fit-content;
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            
+            .logo {
+                width:100%;
+                display:flex;
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            #menu {
+                display: none;
+            }
+
+            .logo label {
+                display: none;
+            }
+
+            .item {
+                width: 100px;
+                padding: 10px 18px;
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 5mm;
+                font-family: poppins;
+                color: white;
+                text-decoration: none;
+            }
+
+            .item:hover {
+                background: rgba(100, 100, 100, .5)
+            }
+
+            @media (max-width: 650px) {
+
+                .center {
+                    width: 650px;
+                    margin-top: 0;
+                    border-radius: 0 0 0 0;
+                }
+
+                .headerbox {
+                    border-radius: 0 0 0 0;
+                }
+
+                .nav {
+                    flex-direction: column;
+
+                }
+
+                .nav .logo {
+                    width: 100%;
+                }
+
+                .nav .logo label {
+                    display: block;
+                    cursor: pointer;
+                    position: relative;
+                    width: 30px;
+                    height: 30px;
+                }
+
+                .nav .logo label::before {
+                    position: absolute;
+                    content: "";
+                    font-family: "Material Icons";
+                    top: 0;
+                    left: 0;
+                    font-size: 80px;
+                }
+
+                .nav .nav-bar {
+                    width: 100%;
+                    flex-direction: column;
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: 0.5s ease-in-out;
+                }
+
+                .nav .nav-link {
+                    width: 100%;
+                    padding: 15px;
+                    border-radius: 0;
+                }
+
+                #menu:checked ~ .nav-bar {
+                    max-height: 500px;
+                    border-radius: 0;
+                }
+
+                .nav{
+                    flex-direction:column;
+                }
+
+                .logo{
+                    width:100%;
+                    display:flex;
+                    justify-content:space-between;
+                    align-items:center;
+                }
+
+                .nav-bar{
+                    display:flex;
+
+                    flex-direction:column;
+
+                    width:100%;
+
+                    max-height:0;
+
+                    opacity:0;
+
+                    overflow:hidden;
+
+                    padding:0;
+
+                    border:none;
+
+                    background:none;
+
+                    box-shadow:none;
+
+                    transition:.4s;
+                }
+
+                #menu:checked ~ .nav-bar{
+                    max-height:500px;
+                    box-shadow: 
+                        6px 6px 10px -2px rgba(255, 255, 255, .78),
+                        inset 4px 4px 8px -2px rgba(25, 25, 25, .5);
+                    
+                    border: 2px solid rgba(255, 255, 255, 0.5);
+                }
+
+                .nav-link{
+                    width:100%;
+                    border-radius:0;
+                }
+            }
+            
+            .headerbox{
+
+                width:100%;
+                min-height:110px;
+
+                display:flex;
+                justify-content:center;
+                align-items:center;
+
+                padding:20px 40px;
+
+                position:sticky;
+                top:0;
+
+                z-index:999;
+                border-radius: 30px 30px 0 0; 
+                background:
+                    linear-gradient(40deg, #3e515b, #4d6471, #a76d5e, #c4a071);
+
+                backdrop-filter:blur(28px);
+
+                border-bottom:
+
+                    1px solid rgba(255, 255, 255, 0.5);
+
+                box-shadow:
+
+                    0 10px 30px rgba(0,0,0,.25);
+
+            }
+
+            .nav{
+
+                width:min(1300px,95%);
+
+                display:flex;
+
+                justify-content:space-between;
+
+                align-items:center;
+
+            }
+
+            .axis-logo img{
+
+                width:70px;
+                height:70px;
+
+                border-radius:50%;
+
+                transition:.35s;
+
+            }
+
+            .axis-logo img:hover{
+
+                transform:rotate(8deg) scale(1.08);
+
+            }
+
+            .nav-bar{
+
+                display:flex;
+
+                gap:14px;
+
+                padding:10px;
+
+                border-radius: 40px;
+
+                border: 2px solid rgba(255, 255, 255, 0.5);
+
+                background:
+
+                    rgba(255,255,255,.05);
+
+                backdrop-filter:blur(26px);
+
+                box-shadow: 
+                    6px 6px 10px -2px rgba(255, 255, 255, .78),
+                    inset 4px 4px 8px -2px rgba(25, 25, 25, .5);
+            }
+
+            .nav-link{
+
+                display:flex;
+
+                justify-content:center;
+
+                align-items:center;
+
+                padding:12px 22px;
+
+                border-radius:999px;
+
+                color:white;
+
+                font-size:16px;
+
+                font-weight:500;
+
+                transition:.35s;
+
+            }
+
+            .nav-link:hover{
+
+                background:
+
+                    linear-gradient(
+                        135deg,
+                        #3E515B,
+                        #4D6471
+                    );
+
+                transform:
+
+                    translateY(-2px);
+
+                box-shadow:
+
+                    0 10px 25px rgba(62,81,91,.35);
+
+            }
+
+            .active{
+
+                background:
+
+                    linear-gradient(
+                        80deg,
+                        #708f96,
+                        #aa895f
+                    );
+
+                color:white;
+
+            }
+            =============*/
+        </style>
+    </head>
+    <body>
+        <div class="center">
+        
+            <div class="menu"> <!--Same as headerbox-->
+               <!--<input type="checkbox" id="">
+                <div class="logo">Logo
+                    <label for="menu">
+                        <span class="material-symbols-outlined">
+                            menu
+                        </span>
+                    </label>
+                </div>
+
+                <div class="items">
+                    <a href="#" class="item">Home</a>
+                    <a href="#" class="item">About</a>
+                    <a href="#" class="item">Features</a>
+                    <a href="#" class="item">Profile</a>
+                    <a href="#" class="item">Logout</a>
+                </div> -->
+            
+
+            
+
+                
+
+            </div>
+
+            <header class="headerbox">
+
+                    <div class="nav">
+                        <input type="checkbox" id="menu">
+                        <div class="logo-two">
+                            <a href="index.html" class="axis-logo">
+                                <img src="../images/Axis.png" alt="AXIS Logo">
+                            </a>
+                            <label for="menu">
+                                <span class="material-symbols-outlined">
+                                    menu
+                                </span>
+                            </label>
+                        </div>
+
+                        <nav class="nav-bar">
+
+                            <a href="index.html" class="nav-link active">Home</a>
+
+                            <a href="studios.html" class="nav-link">Studios</a>
+
+                            <a href="brand.html" class="nav-link">Merch</a>
+
+                            <a href="extras.html" class="nav-link">Extras</a>
+
+                            <a href="updates.html" class="nav-link">Updates</a>
+
+                            <a href="cart.html" class="nav-link">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000"><path d="M223.5-103.5Q200-127 200-160t23.5-56.5Q247-240 280-240t56.5 23.5Q360-193 360-160t-23.5 56.5Q313-80 280-80t-56.5-23.5Zm400 0Q600-127 600-160t23.5-56.5Q647-240 680-240t56.5 23.5Q760-193 760-160t-23.5 56.5Q713-80 680-80t-56.5-23.5ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z"/>></svg>
+
+                            <span id="cartCount">0</span>
+
+                        </a>
+
+                        </nav>
+
+                    </div>
+
+
+                </header>
+
+        </div>
+    </body>
+</html>
