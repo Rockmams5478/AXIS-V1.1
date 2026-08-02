@@ -56,7 +56,10 @@
 }
 
 .info-box1 {
-    width: 140px;
+    font-family: "Michroma", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    width: 160px;
     border: 2px solid #000;
     display: flex;
     justify-content: center;
@@ -64,18 +67,19 @@
     border-radius: 19px 0 0 0;
     color: whitesmoke;
     font-size: 25px;
-    font-weight: 400;
 }
 
 .info-box2 {
-    width: 146px;
+    width: 150px;
     color: whitesmoke;
     border: 2px solid #000;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 25px;
+    font-family: "Michroma", sans-serif;
     font-weight: 400;
+    font-style: italic;
 }
 
 .info-box3 {
@@ -86,7 +90,9 @@
     justify-content: center;
     align-items: center;
     font-size: 25px;
+    font-family: "Michroma", sans-serif;
     font-weight: 400;
+    font-style: italic;
 }
 
 .info-box4 {
@@ -97,7 +103,9 @@
     justify-content: center;
     align-items: center;
     font-size: 25px;
+    font-family: "Michroma", sans-serif;
     font-weight: 400;
+    font-style: italic;
 }
 
 .box-info {
@@ -109,7 +117,9 @@
     border-radius: 0 19px 0 0;
     color: whitesmoke;
     font-size: 25px;
+    font-family: "Michroma", sans-serif;
     font-weight: 400;
+    font-style: italic;
 }
 
 .cartlist {
@@ -158,14 +168,14 @@ background: linear-gradient(45deg, #798c8a, #e0d9e0, #d2d3d8, #6a687e)
 }
 
 .cartimage {
-    width: 140px;
-    height: 140px;
+    width: 160px;
+    height: 160px;
 }
 
 .cartimage img {
     border-radius: 15px;
-    width: 136px;
-    height: 136px;
+    width: 100%;
+    height: 100%;
     border: 2px solid #000;
     margin: 0;
 }
@@ -180,14 +190,17 @@ background: linear-gradient(45deg, #798c8a, #e0d9e0, #d2d3d8, #6a687e)
 
 .productname {
     height: 50px;
-    width: 146px;
+    width: 150px;
     font-size: 22px;
-    font-weight: 600;
+    font-weight: 400;
     color: whitesmoke;
     border: 2px solid #000;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: "Cinzel" serif;
+    font-style: italic;
+    line-height: 20px;
 }
 
 .productprice {
@@ -202,6 +215,8 @@ background: linear-gradient(45deg, #798c8a, #e0d9e0, #d2d3d8, #6a687e)
     align-items: center;
     color: whitesmoke;
     font-size: 22px;
+    font-family: "Cinzel" serif;
+    font-style: italic;
     font-weight: 600;
 }
 
@@ -213,8 +228,9 @@ background: linear-gradient(45deg, #798c8a, #e0d9e0, #d2d3d8, #6a687e)
     justify-content: center;
     align-items: center;
     color: whitesmoke;
-    font-size: 22px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: "Marculles" serif;
 }
 
 .productcolor {
@@ -225,8 +241,10 @@ background: linear-gradient(45deg, #798c8a, #e0d9e0, #d2d3d8, #6a687e)
     justify-content: center;
     align-items: center;
     color: whitesmoke;
-    font-size: 22px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 20px;
+    font-family: "Marculles" serif;
 }
 
 .quantityBox{
@@ -237,6 +255,11 @@ background: linear-gradient(45deg, #798c8a, #e0d9e0, #d2d3d8, #6a687e)
     align-items:center;
     justify-content: center;
     gap:10px;
+    font-family: "Marculles" serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: whitesmoke;
+
 }
 
 .quantityBox button{
@@ -244,7 +267,7 @@ background: linear-gradient(45deg, #798c8a, #e0d9e0, #d2d3d8, #6a687e)
     height:30px;
     border:none;
     cursor:pointer;
-    font-size:18px;
+    font-size: 18px;
     border-radius:5px;
     background: linear-gradient(45deg, #2f3559, #b7a8bd);
     border: 2px solid #000;
@@ -259,14 +282,6 @@ background: linear-gradient(45deg, #798c8a, #e0d9e0, #d2d3d8, #6a687e)
     width: 35px;
     height: 35px;
     box-shadow: 5px 5px 10px -1px rgba(0, 0, 0, 0.329);
-}
-
-.quantityBox span{
-    min-width:20px;
-    text-align:center;
-    font-weight:bold;
-    color: whitesmoke;
-    font-size: 25px;
 }
 
 .remove {
@@ -316,8 +331,8 @@ background: linear-gradient(45deg, #798c8a, #e0d9e0, #d2d3d8, #6a687e)
 }
 
 .deliveryOption {
-    width: 400px;
-    height: 60px;
+    width: 300px;
+    height: 40px;
     background: linear-gradient(45deg, #9ea7b3, #636d79, #7f8995);
     border: 2px solid #000;
     margin: 10px;
@@ -348,9 +363,10 @@ input[type="radio"] {
     justify-content: center;
     align-items: center;
     border-radius: 20px;
-    font-size: 28px;
-    font-weight: bold;
-    color: whitesmoke;
+    font-size: 25px;
+    font-family: "Michroma", sans-serif;
+    font-weight: 400;
+    font-style: italic;
 }
 
 .ship {
@@ -362,6 +378,7 @@ input[type="radio"] {
     justify-content: center;
     align-items: center;
     border-radius: 20px 0 0 20px;
+    color: whitesmoke;
 }
 
 .sub {
@@ -373,6 +390,7 @@ input[type="radio"] {
     justify-content: center;
     align-items: center;
     border-radius: 20px 0 0 20px;
+    color: whitesmoke;
 }
 
 .shipping {
@@ -403,6 +421,7 @@ input[type="radio"] {
     justify-content: center;
     align-items: center;
     background: linear-gradient(45deg, #9ea7b3, #636d79);
+    color: whitesmoke;
 }
 
 .fullprice {
@@ -414,6 +433,7 @@ input[type="radio"] {
     justify-content: center;
     align-items: center;
     border-radius: 20px 0 0 20px;
+    color: whitesmoke;
 }
 
 .important {
@@ -425,14 +445,16 @@ input[type="radio"] {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(30deg, #fe7a6b, #f74f3c, #e4321e, #c92816);
+    background: linear-gradient(90deg, #f74f3c 0%, #e4321e 50%, #c92816 100%);
     color: whitesmoke;
 }
 
 .very {
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
     margin: 3px;
+    color: whitesmoke;
+    font-family: "Sekuya", system-ui;
 }
 
 .nb {
@@ -440,6 +462,8 @@ input[type="radio"] {
     font-weight: 600;
     margin: 3px;
     margin-top: 0;
+    color: whitesmoke;
+    font-family: "Libertinus Math", system-ui;
 }
 
 .must {
@@ -447,6 +471,11 @@ input[type="radio"] {
     font-weight: 400;
     margin: 5px;
     color: #1d1717;
+    padding: 0 20px;
+    color: whitesmoke;
+    font-family: "Libertinus Serif", serif;
+    line-height: 25px;
+    padding: 10px 25px;
 }
 
 .checkout {
@@ -454,8 +483,6 @@ input[type="radio"] {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 200px;
-    height: 40px;
     margin: 10px;
     border-radius: 20px;
     font-size: 20px;
@@ -463,6 +490,8 @@ input[type="radio"] {
     background: linear-gradient(230deg, #174871, #a77693);
     gap: 10px;
     fill: whitesmoke;
+    font-family: "Sekuya", system-ui;
+    
 }
 
 .out {
@@ -470,15 +499,13 @@ input[type="radio"] {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    color: whitesmoke;
     border-radius: 20px;
+    padding: 15px 30px;
+    color: whitesmoke;
 }
 
-.checkout:hover,
-.out:hover {
+.checkout:hover {
     cursor: pointer;
-    width: 220px;
-    height: 55px;
     color: #0e1116;
     fill: #0e1116;
     background: linear-gradient(230deg, #a77693, #ded1c6);
@@ -487,37 +514,51 @@ input[type="radio"] {
 @media (max-width: 460px) {
 
     .item-info-box {
-        width: 440px;
+        width: 100%;
+        border-radius: 0;
 
     }
 
     .info-box1 {
-        width: 70px;
-        font-size: 18px;
+        width: 86px;
+        font-size: 14px;
+        line-height: 18px;
+        border-radius: 0;
+        padding-bottom: 5px;
     }
 
     .info-box2 {
-        width: 70px;
-        font-size: 18px;
+        width: 76px;
+        font-size: 14px;
+        line-height: 18px;
+        padding-bottom: 5px;
     }
 
     .info-box3 {
-        width: 70px;
-        font-size: 18px;
+        width: 72px;
+        font-size: 14px;
+        line-height: 18px;
+        padding-bottom: 5px;
     }
 
     .info-box4 {
-        width: 70px;
-        font-size: 18px;
+        width: 82px;
+        font-size: 14px;
+        line-height: 18px;
+        padding-bottom: 5px;
     }
 
     .box-info {
-        width: 70px;
-        font-size: 18px;
+        width: 72px;
+        font-size: 14px;
+        border-radius: 0;
+        line-height: 18px;
+        padding-bottom: 5px;
     }
 
     .cartlist {
-        width: 440px;
+        width: 100%;
+        border-radius: 0;
     }
 
     .important {
@@ -531,44 +572,51 @@ input[type="radio"] {
     }
 */
     .cartRow {
-        width: 436px;
-        height: 74px;
+        width: 460px;
+        height: 100%;
+        border-radius: 0;
     }
 
     .cartimage {
-        width: 74px;
-        height: 74px;
+        width: 86px;
+        height: 86px;
+        border-radius: 0;
     }
 
     .cartimage img {
-        width: 70px;
-        height: 70px;
+        width: 100%;
+        height: 100%;
+        border-radius: 0 10px 10px 0;
     }
 
     .productname {
-        width: 70px;
+        width: 72px;
         font-size: 14px;
+        line-height: 18px;
     }
 
     .productsize {
-        width: 70px;
+        width: 72px;
         font-size: 14px;
+        line-height: 18px;
     }
 
     .productcolor {
-        width: 70px;
-        font-size: 14px;
+        width: 72px;
+        font-size: 12px;
+        line-height: 16px;
     }
 
     .productprice {
-        width: 70px;
+        width: 72px;
 
     }
 
     .quantityBox {
-        width: 70px;
+        width: 82px;
         font-size: 14px;
         gap: 5px;
+
     }
 
     .quantityBox button {
@@ -617,7 +665,7 @@ input[type="radio"] {
     .fullprice {
         width: 180px;
         height: 40px;
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .shipping,
@@ -625,7 +673,8 @@ input[type="radio"] {
     .total {
         width: 80px;
         height: 40px;
-        font-size: 20px;
+        font-size: 12px;
+        font-weight: bold;
     }
 
     .remove {
@@ -633,16 +682,30 @@ input[type="radio"] {
     }
 
     .very {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .nb {
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 300;
     }
 
     .must {
         font-size: 12px;
         font-weight: 600;
+        line-height: 20px;
+        padding: 0 20px;
+    }
+
+    .checkout {
+        font-size: 14px;
+    }
+
+    .out {
+        padding: 5px 15px;
+    }
+
+    .checkout:hover {
+        padding: 8px 18px;
     }
 }

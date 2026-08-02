@@ -1824,40 +1824,6 @@ section{
 
     }
 
-    .axis-logo img{
-
-        width:55px;
-
-        height:55px;
-
-    }
-
-    .nav-link{
-
-        font-size:13px;
-
-        padding:9px;
-
-    }
-
-    .footer-logo h2{
-
-        font-size:30px;
-
-    }
-
-    .footer-column h3{
-
-        font-size:20px;
-
-    }
-
-    .hero-title{
-
-        font-size:38px;
-
-    }
-
     .hero-text{
 
         font-size:15px;
@@ -1921,49 +1887,6 @@ section{
 
     }
 
-    .headerbox{
-
-        padding:15px 8px;
-
-    }
-
-    .nav{
-
-        gap:10px;
-
-    }
-
-    .nav-bar{
-
-        padding:6px;
-
-    }
-
-    .nav-link{
-
-        flex:1 1 100%;
-
-        width:100%;
-
-        justify-content:center;
-
-        font-size:13px;
-
-    }
-
-    .footerbox{
-
-        padding:60px 0 25px;
-
-    }
-
-    .footer-column a,
-    .footer-column p{
-
-        font-size:14px;
-
-    }
-
      .hero{
 
         padding:40px 0;
@@ -1972,13 +1895,15 @@ section{
 
     .hero-title{
 
-        font-size:34px;
+        padding: 10px;
+        font-size:30px;
 
     }
 
     .hero-text{
-
-        font-size:14px;
+        padding: 20px;
+        font-size:12px;
+        font-weight: 700;
 
     }
 
@@ -1993,11 +1918,56 @@ section{
     }
 
     .hero-image{
-
+        width: 340px;
         height:340px;
 
     }
 
+    .services {
+        padding: 40px 0;
+    }
+
+    .services .title h2 {
+        font-size: 30px;
+    }
+
+    .service-card {
+        padding: 20px 15px;
+    }
+
+    .service-icon {
+        margin-bottom: 12px;
+    }
+
+    .service-card h3 {
+        margin-bottom: 12px;
+    }
+
+    .about-axis {
+        padding: 40px 0;
+        gap: 20px;
+    }
+
+    .about-left h2 {
+        font-size: 36px;
+        padding: 20px 28px;
+        margin-bottom: 0;
+    }
+
+    .about-left p {
+        padding: 10px 28px;
+        font-size: 16px;
+    }
+
+    .featured {
+        padding: 40px 0;
+    }
+
+    .merch-preview {
+        padding: 40px 0;
+    }
+
+    
 
 }
 

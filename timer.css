@@ -1,6 +1,9 @@
 .hero {
     width: 840px;
-    background: linear-gradient(145deg, #051f20, #0b2b26, #163832, #235347, #8eb69b, #daf1de);
+    background: url(images/background-six.jpg), linear-gradient(rgba(255, 255, 255, 0.212), rgba(255, 255, 255, 0.24)) ;
+    backdrop-filter: blur(1px);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 8px 8px 15px -3px rgba(255, 255, 255, 0.548), inset 5px 5px 8px -3px rgba(255, 255, 255, 0.575);
     margin: 20px;
     display: flex;
     flex-direction: column;
@@ -8,23 +11,36 @@
     align-items: center;
     color: whitesmoke;
     border-radius: 20px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .head {
-    font-size: 50px;
-    margin: 5px;
+    font-family: "Outfit", sans-serif;
+    margin: 0;
+    margin-top: 10px;
+    font-size: 30px;
+    font-weight: 800;
+    background: linear-gradient(45deg, #ffffff 0%, #cbd5e1 55%, #94a3b8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .line {
     font-size: 40px;
     font-weight: 100;
     margin: 5px;
+    color: #f8fafc;
 }
 
 .para {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 400;
     font-size: 30px;
-    font-weight: 600;
     margin: 5px;
+    color: #94a3b8;
 }
 
 .timebox {
@@ -35,16 +51,21 @@
 
 @media (max-width: 460px) {
 
+    .hero {
+        width: 95%;
+    }
+
     .head {
-        font-size: 30px;
+        font-size: 28px;
+        padding: 0 25px
     }
 
     .line {
-        font-size: 26px;
+        font-size: 28px;
     }
 
     .para {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     .timebox {

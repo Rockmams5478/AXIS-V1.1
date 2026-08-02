@@ -1,39 +1,3 @@
-* {
-    padding: 0;
-    margin: 0;
-}
-
-.news {
-    width: 100%;
-    height: 50px;
-    overflow: hidden;
-    background: #d61900;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.ticker {
-    white-space: nowrap;
-}
-
-.ticker span {
-    font-size: 30px;
-    font-weight: 400;
-    color: #fff;
-    display: inline-block;
-    padding-left: 100%;
-    animation: scroll-left 50s linear infinite;
-}
-
-@keyframes scroll-left{
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
 
 .slider {
     width: 380px;
@@ -48,8 +12,8 @@
 }
 
 .slider img {
-    width: 380px;
-    height: 380px;
+    width: 376px;
+    height: 376px;
     border-radius: 10px;
 }
 
@@ -146,12 +110,12 @@ linear-gradient(30deg, #ffe4e9, #ffd6df, #ffb6c1, #ffa1b1)
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-top: 10px;
     gap: 10px;
     
 }
 
 .name {
+    font-family: "Marcellus", serif;
     margin: 5px;
     font-size: 30px;
     font-weight: 600;
@@ -159,6 +123,7 @@ linear-gradient(30deg, #ffe4e9, #ffd6df, #ffb6c1, #ffa1b1)
 }
 
 .price {
+    font-family: "Cinzel", serif;
     margin: 5px;
     font-size: 30px;
     font-weight: bold;
@@ -172,6 +137,8 @@ linear-gradient(30deg, #ffe4e9, #ffd6df, #ffb6c1, #ffa1b1)
     align-items: center;
     flex-direction: row;
     margin: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
     gap: 10px;
     
 }
@@ -182,10 +149,11 @@ linear-gradient(30deg, #ffe4e9, #ffd6df, #ffb6c1, #ffa1b1)
     border-radius: 20px;
     border: none;
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 600;
     margin: 5px; 
     background: rgba(94, 109, 109, 0.699);
     color: whitesmoke;
+    font-family: "Sora" sans-serif;
 }
 
 .colorSelect {
@@ -194,10 +162,11 @@ linear-gradient(30deg, #ffe4e9, #ffd6df, #ffb6c1, #ffa1b1)
     border: none;
     border-radius: 20px;
     font-size: 16px;
-    font-weight: 300;
+    font-weight: 600;
     margin: 5px;
     background: rgba(94, 109, 109, 0.699);
     color: whitesmoke;
+    font-family: "Sora" sans-serif;
 }
 
 .sizeSelect:hover,
@@ -213,8 +182,6 @@ linear-gradient(30deg, #ffe4e9, #ffd6df, #ffb6c1, #ffa1b1)
     align-items: center;
     border-radius: 5px;
     margin: 5px;
-    font-size: 18px;
-    font-weight: 400;
     background: none;
 }
 
@@ -238,7 +205,8 @@ linear-gradient(30deg, #ffe4e9, #ffd6df, #ffb6c1, #ffa1b1)
     align-items: center;
     border-radius: 0 5px 5px 0;
     font-size: 22px;
-    font-weight: 500;
+    font-weight: 600;
+    font-family: "Cinzel" serif;
 }
 
 .addbtn:hover {
@@ -260,6 +228,10 @@ linear-gradient(30deg, #ffe4e9, #ffd6df, #ffb6c1, #ffa1b1)
     justify-content: center;
     align-items: center;
     margin: 10px;
+    font-family: "Cormorant Garamond" sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    color: #040000;
 }
 
 .descrip {
@@ -278,27 +250,35 @@ linear-gradient(30deg, #ffe4e9, #ffd6df, #ffb6c1, #ffa1b1)
 }
 
 .des-paragraph {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Cinzel" serif;
     margin: 5px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 18px;
+    line-height: 22px;
+    padding: 8px 14px;
+    line-break: auto;
 }
 
 .tion {
+    font-family: "Marcellus", serif;
     font-size: 28px;
     font-weight: bold;
     color: #040000;
     margin: 5px;
+    line-height: 25px;
+    padding: 10px 5px;
+    margin: 0;
+    line-break: auto;
 }
 
 
 
 .popbox {
     width: 406px;
-    height: 1450px;
+    height: auto;
     margin: 20px;
     margin-left: 19px;
     border: 2px solid #000;
@@ -330,7 +310,7 @@ linear-gradient(30deg, #ffe4e9, #ffd6df, #ffb6c1, #ffa1b1)
 
 .item-card {
     width: 180px;
-    height: 250px;
+    height: auto;
     margin: 10px;
     background: linear-gradient(230deg, #364649, #708f96);
     border-radius: 20px;
@@ -347,17 +327,17 @@ linear-gradient(30deg, #ffe4e9, #ffd6df, #ffb6c1, #ffa1b1)
 }
 
 .productname {
-    margin: 5px;
-    font-size: 22px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 700;
     color: whitesmoke;
+    font-family: "Cormorant Garamond" sans-serif;
 }
 
 .productprice {
-    margin: 5px;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 600;
     color: #0e1116;
+    font-family: "Cinzel" serif;
 }
 
 .image img{
@@ -392,8 +372,8 @@ linear-gradient(30deg, #ffe4e9, #ffd6df, #ffb6c1, #ffa1b1)
     }
 
     .slider img {
-        width: 410px;
-        height: 410px;
+        width: 406px;
+        height: 406px;
     }
 
     .item {
@@ -437,7 +417,7 @@ linear-gradient(30deg, #ffe4e9, #ffd6df, #ffb6c1, #ffa1b1)
 
     .item-card {
         width: 180px;
-        height: 240px;
+        height: auto;
     }
 
     .image img {
